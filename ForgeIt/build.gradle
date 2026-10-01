@@ -1,0 +1,29 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.147'
+}
+version = '2.0.0'
+group = 'com.ticuliro.forgeit'
+base { archivesName = 'forgeit-1.21.1-neoforge' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+java.withSourcesJar()
+neoForge {
+    version = '21.1.252'
+    runs {
+        client { client() }
+        server { server(); programArgument '--nogui' }
+        gameTestServer {
+            type = "gameTestServer"
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'forgeit'
+        }
+        configureEach { logLevel = org.slf4j.event.Level.INFO }
+    }
+    mods { forgeit { sourceSet(sourceSets.main) } }
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+
+tasks.withType(Jar).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+    from('LICENSE') { into 'META-INF' }
+}

@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="forgeit"
+version="2.0.0"
+displayName="ForgeIt!"
+authors="Ticuliro & friends"
+description='''
+Reforge your weapons and tools with coins earned from mobs.
+Four coin denominations, a persistent wallet, withdrawals and seven reforge modifiers.
+Minecraft 1.21.1 / NeoForge. Portuguese (Brazil) and English included.
+'''
+
+[[dependencies.forgeit]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.252,21.2)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.forgeit]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"

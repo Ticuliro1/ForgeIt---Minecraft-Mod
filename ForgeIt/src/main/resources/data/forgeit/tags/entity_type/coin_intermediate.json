@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:witch",
+    "minecraft:blaze",
+    "minecraft:ghast",
+    "minecraft:enderman",
+    "minecraft:wither_skeleton",
+    "minecraft:breeze",
+    "minecraft:vindicator",
+    "minecraft:hoglin",
+    "minecraft:zoglin",
+    "minecraft:guardian",
+    "minecraft:shulker"
+  ]
+}
